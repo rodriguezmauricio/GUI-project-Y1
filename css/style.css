@@ -1,0 +1,163 @@
+
+/*==================================================  
+Font import
+==================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;500;700&family=Inter:wght@400;600;700&display=swap');
+
+/*==================================================  
+CSS Reset
+==================================================*/
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*================================================== 
+    General colors
+    ==================================================*/
+    --color-accent: #bb8431;
+    --color-accent-secondary: #ffffff;
+    --color-accent-terciary: #ffffff;
+
+    --color-faded: #444444;
+
+    --color-bg1: #0e0e0e;
+    --color-bg2: #111111;
+
+
+    /*================================================== 
+    Buttons styles
+    ==================================================*/
+    --color-button-primary: #ffffff;
+    --color-button-primary-hover: #ffffff;
+    
+    --color-button-secondary: #ffffff;
+    --color-button-secondary-hover: #ffffff;
+
+
+    /*================================================== 
+    Fonts styles
+    ==================================================*/
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-color-body: #b9b9b9;
+
+    /*================================================== 
+    Spacing
+    ==================================================*/
+    --gap-small: 16px;
+    --gap-medium: 30px;
+    --gap-big: 50px;
+
+    /* use this for padding and marging */
+    --spacing-small:30px;
+    --spacing-medium:50px;
+    --spacing-big:80px;
+}
+
+body{
+    background-color: var(--color-bg1);
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-color-body);
+    line-height: 0.9em;
+}
+
+h1, h2, h3{
+    font-family: var(--font-display);
+}
+
+h1{
+    font-size: 5em;
+}
+
+h2{
+    font-size: 7rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--font-color-body);
+}
+
+span{
+    color: var(--color-accent);
+}
+
+main, section{
+    width: 100%;
+}
+
+/*================================================== 
+CUSTOM CLASSES
+==================================================*/
+
+.hero{
+    background-image: url("../images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.container{
+    width: 1600px;
+    margin: auto;
+    padding: var(--spacing-big) var(--spacing-small);
+}
+
+.section-secondary{
+    background-color: var(--color-bg2);
+}
+
+.separator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    padding: var(--spacing-small);
+}
+
+.separator-edge{
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-faded);
+}
+
+.separator-img {
+    color: var(--color-faded);
+    padding: 0 1rem;
+}
+
+.separator-img img {
+    width: 70px;
+}
+
+/*================================================== 
+BUTTONS
+==================================================*/
+
+.btn{
+    padding: var(--spacing-small);
+    background-color: var(--color-accent);
+    cursor: pointer;
+}
