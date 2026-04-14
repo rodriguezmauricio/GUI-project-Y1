@@ -2,7 +2,8 @@
 /*==================================================  
 Font import
 ==================================================*/
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;500;700&family=Inter:wght@400;600;700&display=swap');
 
 /*==================================================  
@@ -41,7 +42,7 @@ CSS Reset
     /*================================================== 
     Fonts styles
     ==================================================*/
-    --font-display: 'Fraunces', Georgia, serif;
+    --font-display: 'Alfa Slab One', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
     --font-color-title: #d6bf9d;
     --font-color-body-light: #fdfdfd;
@@ -70,6 +71,7 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--font-display);
     text-transform: uppercase;
     padding: 0.2em;
+    letter-spacing: 0.7rem;
 }
 
 
@@ -82,10 +84,17 @@ h2{
     font-size: 7rem;
     line-height: 0.9em;
     color: var(--font-color-title);
+    letter-spacing: 0.5rem;
 }
 
 h3{
     font-size: 3rem;
+    letter-spacing: 0.5rem;
+}
+
+h4, h5, h6{
+    letter-spacing: 0.3rem;
+
 }
 
 p{
@@ -111,7 +120,7 @@ CUSTOM CLASSES
 ==================================================*/
 
 .hero{
-    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url("../images/hero.jpg");
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,7 +130,7 @@ CUSTOM CLASSES
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     text-align: center;
 }
 
@@ -131,10 +140,23 @@ CUSTOM CLASSES
     padding: var(--spacing-big) var(--spacing-small);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: var(--spacing-big); */
+}
+
+.hero .container{
+    gap: var(--spacing-big);
+}
+
+.hero .container img{
+    /* width: 150px; */
+    max-width: 150px;
+    height: auto;
 }
 
 .hero-title{
-    font-size: 10em;
+    font-size: 8em;
 }
 
 .hero .container img{
