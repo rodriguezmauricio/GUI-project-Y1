@@ -43,8 +43,8 @@ CSS Reset
     ==================================================*/
     --font-display: 'Fraunces', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
-    --font-color-body-title: #d6bf9d;
-    --font-color-body-light: #b9b9b9;
+    --font-color-title: #d6bf9d;
+    --font-color-body-light: #fdfdfd;
     --font-color-body-dark: #1d1d1d;
 
     /*================================================== 
@@ -81,7 +81,7 @@ h1{
 h2{
     font-size: 7rem;
     line-height: 0.9em;
-    color: var(--font-color-body-title);
+    color: var(--font-color-title);
 }
 
 h3{
@@ -111,7 +111,7 @@ CUSTOM CLASSES
 ==================================================*/
 
 .hero{
-    background-image: url("../images/hero.jpg");
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ CUSTOM CLASSES
 
 .separator-edge{
     width: 100px;
-    height: 3px;
+    height: 1px;
     background-color: var(--color-faded);
 }
 
@@ -189,7 +189,7 @@ HOME - ABOUT SECTION STYLE
 
 .small-separator-edge{
     width: 100px;
-    height: 3px;
+    height: 1px;
     background-color: var(--color-accent);
 }
 
@@ -202,6 +202,29 @@ HOME - ABOUT SECTION STYLE
     /* flex: 1; */
     min-width: 300px;
 }
+
+/*================================================== 
+HOME - PORTFOLIO SECTION STYLE
+==================================================*/
+.grid-portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.grid-portfolio-img{
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+}
+
+.grid-portfolio-img2{
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    grid-row: span 2;
+}
+
 /*================================================== 
 BUTTONS
 ==================================================*/
