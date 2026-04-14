@@ -16,6 +16,12 @@ function renderSeparator(){
     </div>`
 }
 
+function renderSamllSeparator(){
+    return `<div class="separator">
+    <div class="small-separator-edge"></div>
+    </div>`
+}
+
 document.querySelectorAll(".separator-slot").forEach((slot) => {
     return slot.innerHTML = renderSeparator();
 })

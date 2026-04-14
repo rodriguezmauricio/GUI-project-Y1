@@ -25,7 +25,7 @@ CSS Reset
     --color-faded: #444444;
 
     --color-bg1: #0e0e0e;
-    --color-bg2: #111111;
+    --color-bg2: #eeeeee;
 
 
     /*================================================== 
@@ -43,7 +43,9 @@ CSS Reset
     ==================================================*/
     --font-display: 'Fraunces', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
-    --font-color-body: #b9b9b9;
+    --font-color-body-title: #d6bf9d;
+    --font-color-body-light: #b9b9b9;
+    --font-color-body-dark: #1d1d1d;
 
     /*================================================== 
     Spacing
@@ -64,20 +66,22 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
-    color: var(--font-color-body);
-    line-height: 0.9em;
+    color: var(--font-color-body-light);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    padding: 0.2em;
 }
 
-h1, h2, h3{
-    font-family: var(--font-display);
-}
 
 h1{
     font-size: 5em;
+    line-height: 0.9em;
 }
 
 h2{
     font-size: 7rem;
+    line-height: 0.9em;
+    color: var(--font-color-body-title);
 }
 
 h3{
@@ -87,7 +91,7 @@ h3{
 p{
     font-family: var(--font-body);
     font-size: 18px;
-    color: var(--font-color-body);
+    color: var(--font-color-body-light);
 }
 
 span{
@@ -96,6 +100,10 @@ span{
 
 main, section{
     width: 100%;
+}
+
+.dark{
+    color: var(--font-color-body-dark);
 }
 
 /*================================================== 
@@ -122,10 +130,23 @@ CUSTOM CLASSES
     width: 1600px;
     margin: auto;
     padding: var(--spacing-big) var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle-container{
+    max-width: 800px;
+    margin: auto;
 }
 
 .section-secondary{
     background-color: var(--color-bg2);
+}
+
+/* SEPARATOR styles*/
+
+.separator-slot{
+    padding-bottom: 20px;
 }
 
 .separator{
@@ -134,7 +155,7 @@ CUSTOM CLASSES
     justify-content: center;
     align-items: center;
     gap: var(--gap-small);
-    padding: var(--spacing-small);
+    /* padding: var(--spacing-small); */
 }
 
 .separator-edge{
@@ -152,6 +173,35 @@ CUSTOM CLASSES
     width: 70px;
 }
 
+/*================================================== 
+HOME - ABOUT SECTION STYLE
+==================================================*/
+
+.box-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 800px; */
+    margin: var(--spacing-big) auto;
+    gap: var(--gap-big) ;
+}
+
+.small-separator-edge{
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    /* flex: 1; */
+    min-width: 300px;
+}
 /*================================================== 
 BUTTONS
 ==================================================*/
