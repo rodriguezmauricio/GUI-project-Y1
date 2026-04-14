@@ -20,6 +20,7 @@ CSS Reset
     General colors
     ==================================================*/
     --color-accent: #bb8431;
+    --color-accent-hover: #83591b;
     --color-accent-secondary: #ffffff;
     --color-accent-terciary: #ffffff;
 
@@ -64,13 +65,27 @@ CSS Reset
 body{
     background-color: var(--color-bg1);
     text-align: center;
+    overflow-x: hidden;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-medium);
 }
 
 h1, h2, h3, h4, h5, h6{
     color: var(--font-color-body-light);
     font-family: var(--font-display);
     text-transform: uppercase;
-    padding: 0.2em;
+    padding: 0.4em;
     letter-spacing: 0.7rem;
 }
 
@@ -83,7 +98,7 @@ h1{
 h2{
     font-size: 7rem;
     line-height: 0.9em;
-    color: var(--font-color-title);
+    color: var(--color-accent);
     letter-spacing: 0.5rem;
 }
 
@@ -115,6 +130,11 @@ main, section{
     color: var(--font-color-body-dark);
 }
 
+.highlight{
+    background-color: var(--color-accent);
+    padding: var(--spacing-small);
+}
+
 /*================================================== 
 CUSTOM CLASSES
 ==================================================*/
@@ -124,6 +144,7 @@ CUSTOM CLASSES
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
 
     display: flex;
@@ -210,6 +231,7 @@ HOME - ABOUT SECTION STYLE
     background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url("/images/about-bg.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .box-container{
@@ -245,7 +267,7 @@ HOME - SERVICES SECTION STYLE
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    align-items: center;
+    align-items: stretch;
     gap: var(--gap-big);
     margin-top: var(--spacing-big);
 }
@@ -253,7 +275,8 @@ HOME - SERVICES SECTION STYLE
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     gap: var(--spacing-small);
 
     align-items: center;
@@ -291,26 +314,62 @@ HOME - SERVICES SECTION STYLE
 }
 
 /*================================================== 
-HOME - PORTFOLIO SECTION STYLE
+====================================================
+PORTFOLIO PAGE - PORTFOLIO SECTION STYLE
+====================================================
+==================================================*/
+
+/*================================================== 
+WEBSITE - GRID GALLERY STYLE
 ==================================================*/
 .grid-portfolio{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
 }
 
-.grid-portfolio-img{
+.grid-portfolio-img,
+.grid-portfolio-img2 {
     background-size: cover;
     background-position: center;
     min-height: 40vh;
+    position: relative;
+    z-index: 1;
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out, z-index 0s linear 0s;
 }
 
-.grid-portfolio-img2{
-    background-size: cover;
-    background-position: center;
-    min-height: 40vh;
+.grid-portfolio-img2 {
     grid-row: span 2;
 }
+
+.grid-portfolio-img:hover{
+    transform: scale(1.8);
+    z-index: 100;
+    cursor: pointer;
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+}
+
+ .grid-portfolio-img2:hover{
+    transform: scale(1.5);
+    z-index: 100;
+    cursor: pointer;
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+ }
+
+.quote{
+    padding: var(--spacing-big);
+    background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.95)),url("../images/port_0.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*================================================== 
+HOME - CONTACT SECTION STYLE
+==================================================*/
 
 /*================================================== 
 BUTTONS
@@ -321,3 +380,11 @@ BUTTONS
     background-color: var(--color-accent);
     cursor: pointer;
 }
+
+.btn:hover{
+    background-color: var(--color-accent-hover);
+}
+
+/*================================================== 
+WEBSITE - RESPONSIVENESS
+==================================================*/

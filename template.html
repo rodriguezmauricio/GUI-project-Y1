@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mauricio.css">
+        <link rel="stylesheet" href="css/mauricio.css">
+    <link rel="stylesheet" href="css/eamonn.css">
+    <script src="js/mauricio.js" defer></script>
+    <script src="js/eamonn.js" defer></script>
     <title>Ink & Iron - Tattoo Shop</title>
 </head>
 <body>
     <nav>
         <!--  navigation always in this block -->
+          <!-- TO DO: Add the menu in the placeholder -->
+          PLACEHOLDER: HOME ABOUT SERVICES GALLERY CONTACT
     </nav>
 
+    <!-- ======================================================== 
+         HEADER
+    ======================================================== -->
+    <header>
+        <h1>
+            PAGE TITLE <!-- Change here  -->
+        </h1>
+    </header>
     <main>
-        <!-- ======================================================== 
-             
-        ======================================================== -->
         <section>
             <div class="" id="">
                  <!-- ======================================================== 
@@ -23,17 +33,25 @@
                     If its a gallery we'll use grid layout.
                     Everything else using flexbox.
                   ======================================================== -->
-             </div>
-             <h3>Small text above h2</h3>
-             <h2>
-                All main headers will be H2 using the separator div below it:
-             </h2>
-             <!-- separator div is a constant below EVERY H2! -->
-             <div class="separator-slot"></div> 
-             <div class="subtitle-container">
-                paragraph explaining the section
-             </div>
+                  <h4>Small text above h2</h4>
+                  <h2>
+                      <!-- All main headers will be H2 using the separator div below it: -->
+                      SECTION HEADER
+                    </h2>
+                    <!-- separator div is a constant below EVERY H2! -->
+                    <div class="separator-slot"></div> 
+                    <div class="subtitle-container">
+                        paragraph explaining the section
+                    </div>
+                </div>
 
+        </section>
+
+        <!-- DON NOT CHANGE THE BLOCKS BELOW -->
+        <!-- They go at the bottom of every page, like a template -->
+        <!-- They are being rendered in JS in mauricio.js -->
+        <section>
+            <div class="render-map"></div>
         </section>
     </main>
 

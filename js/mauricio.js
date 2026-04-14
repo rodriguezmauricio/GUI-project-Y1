@@ -33,24 +33,53 @@ document.querySelectorAll(".separator-slot").forEach((slot) => {
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
-// Renders the portfolio grid
+// Description:Renders the portfolio grid
+// I know that using a loop to iterate and render the images would be better,
+// but since a few of those have a different class and there is a limited amount of pictures
+// I decide to hard code it and duplicate it. 
+// Against the FRY concept, but acceptable for such a small project.
+//
 // images source: pexels.com
 // ----------------------------------
-const images = ["port_0.jpg", "port_1.jpg", "port_2.jpg", "port_3.jpg", 
+const imagesArr = ["port_0.jpg", "port_1.jpg", "port_2.jpg", "port_3.jpg", 
                 "port_4.jpg", "port_5.jpg", "port_6.jpg", "port_7.jpg"];
 
-function renderPortfolioGrid(images){
+function renderPortfolioGrid(imagesArr){
     return `<div class="grid-portfolio">
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[0]})"></div>
-    <div class="grid-portfolio-img2" style="background-image: url(images/${images[1]})"></div>
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[2]})"></div>
-    <div class="grid-portfolio-img2" style="background-image: url(images/${images[3]})"></div>
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[4]})"></div>
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[5]})"></div>
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[6]})"></div>
-    <div class="grid-portfolio-img"  style="background-image: url(images/${images[7]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[0]})"></div>
+    <div class="grid-portfolio-img2" style="background-image: url(images/${imagesArr[1]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[2]})"></div>
+    <div class="grid-portfolio-img2" style="background-image: url(images/${imagesArr[3]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[4]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[5]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[6]})"></div>
+    <div class="grid-portfolio-img"  style="background-image: url(images/${imagesArr[7]})"></div>
     </div>`
 }
 
-document.querySelector(".grid-portfolio-slot").innerHTML = renderPortfolioGrid(images);
-console.log(renderPortfolioGrid(images));
+function renderPortfolioGrid2(imagesArr){
+    return `<div class="grid-portfolio">
+    <div class="grid-portfolio-img2"  style="background-image: url(images/${imagesArr[0]})"></div>
+    <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[1]})"></div>
+    <div class="grid-portfolio-img2"  style="background-image: url(images/${imagesArr[2]})"></div>
+    <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[3]})"></div>
+    <div class="grid-portfolio-img2"  style="background-image: url(images/${imagesArr[7]})"></div>
+    <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[5]})"></div>
+    <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[6]})"></div>
+    </div>`
+}
+
+const gridSlot  = document.querySelector(".grid-portfolio-slot");
+const gridSlot2 = document.querySelector(".grid-portfolio-slot2");
+const mapSlot   = document.querySelector(".render-map");
+
+if (gridSlot)  gridSlot.innerHTML  = renderPortfolioGrid(imagesArr);
+if (gridSlot2) gridSlot2.innerHTML = renderPortfolioGrid2(imagesArr.reverse());
+if (mapSlot)   mapSlot.innerHTML   = renderMap();
+
+function renderMap(){
+    //Await for Eamonn's code
+    return `<h2>MAP AWAIT</h2>`;
+}
+
+document.querySelector(".render-map").innerHTML = renderMap();
