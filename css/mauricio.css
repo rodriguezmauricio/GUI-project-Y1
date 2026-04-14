@@ -123,7 +123,6 @@ CUSTOM CLASSES
     align-items: center;
 
     text-align: center;
-
 }
 
 .container{
@@ -132,6 +131,14 @@ CUSTOM CLASSES
     padding: var(--spacing-big) var(--spacing-small);
     display: flex;
     flex-direction: column;
+}
+
+.hero-title{
+    font-size: 10em;
+}
+
+.hero .container img{
+    width: 350px;
 }
 
 .subtitle-container{
@@ -177,6 +184,12 @@ CUSTOM CLASSES
 HOME - ABOUT SECTION STYLE
 ==================================================*/
 
+.about-section{
+    background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url("/images/about-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 .box-container{
     display: flex;
     flex-direction: row;
@@ -201,6 +214,58 @@ HOME - ABOUT SECTION STYLE
     gap: var(--gap-small);
     /* flex: 1; */
     min-width: 300px;
+}
+
+/*================================================== 
+HOME - SERVICES SECTION STYLE
+==================================================*/
+.services-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    gap: var(--gap-big);
+    margin-top: var(--spacing-big);
+}
+.services-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: var(--spacing-small);
+
+    align-items: center;
+    min-height: 50vh;
+    background-color: #bb8431;
+    padding: var(--spacing-small);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.services-box:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.services-box-1{
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../images/service-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-box-2{
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../images/service-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-box-3{
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../images/service-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*================================================== 
