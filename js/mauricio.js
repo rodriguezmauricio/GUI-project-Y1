@@ -20,7 +20,7 @@ function renderSeparator(){
     </div>`
 }
 
-function renderSamllSeparator(){
+function renderSmallSeparator(){
     return `<div class="separator">
     <div class="small-separator-edge"></div>
     </div>`
@@ -30,6 +30,18 @@ document.querySelectorAll(".separator-slot").forEach((slot) => {
     return slot.innerHTML = renderSeparator();
 })
 
+// ----------------------------------
+// Author: Mauricio Rodriguez
+// Description:Renders the portfolio grid
+// ----------------------------------
+function renderMenu(){
+    return `<h4>Waiting for menu to be replaced here</h4>`   
+}
+
+
+const menu = document.querySelector(".render-menu");
+if (menu) menu.innerHTML = renderMenu();
+
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
@@ -37,7 +49,7 @@ document.querySelectorAll(".separator-slot").forEach((slot) => {
 // I know that using a loop to iterate and render the images would be better,
 // but since a few of those have a different class and there is a limited amount of pictures
 // I decide to hard code it and duplicate it. 
-// Against the FRY concept, but acceptable for such a small project.
+// Against the DRY concept, but acceptable for such a small project.
 //
 // images source: pexels.com
 // ----------------------------------
