@@ -91,12 +91,15 @@ h1, h2, h3, h4, h5, h6{
 
 
 h1{
-    font-size: 5em;
+    /* font-size: 5em; */
+    font-size: clamp(3rem 50vw 7rem);
     line-height: 0.9em;
+    color: var(--color-accent);
 }
 
 h2{
-    font-size: 7rem;
+    /* font-size: 7rem; */
+    font-size: clamp(3rem 50vw 7rem);
     line-height: 0.9em;
     color: var(--color-accent);
     letter-spacing: 0.5rem;
@@ -124,6 +127,15 @@ span{
 
 main, section{
     width: 100%;
+}
+
+section{
+    padding-bottom: var(--spacing-big);
+    padding-top: var(--spacing-big);
+}
+
+.no-padding-section{
+    padding: 0;
 }
 
 .dark{
@@ -168,6 +180,10 @@ CUSTOM CLASSES
 
 .hero .container{
     gap: var(--spacing-big);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero .container img{
@@ -177,7 +193,9 @@ CUSTOM CLASSES
 }
 
 .hero-title{
-    font-size: 8em;
+    /* font-size: 8em; */
+    font-size: clamp(3rem, 7vw, 7rem);
+
 }
 
 .hero .container img{
@@ -195,8 +213,8 @@ CUSTOM CLASSES
 
 /* SEPARATOR styles*/
 
-.separator-slot{
-    padding-bottom: 20px;
+.separator-slot, .separator-slot-dark{
+    padding-bottom: var(--spacing-small);
 }
 
 .separator{
@@ -211,13 +229,23 @@ CUSTOM CLASSES
 .separator-edge{
     width: 100px;
     height: 1px;
-    background-color: var(--color-faded);
+    background-color: var(--font-color-body-light);
 }
 
 .separator-img {
-    color: var(--color-faded);
+    color: var(--font-color-body-light);
     padding: 0 1rem;
 }
+.separator-img-dark {
+    color: var(--font-color-body-dark);
+    padding: 0 1rem;
+}
+.separator-edge-dark{
+    width: 100px;
+    height: 1px;
+    background-color: var(--font-color-body-dark);
+}
+
 
 .separator-img img {
     width: 70px;
@@ -270,6 +298,7 @@ HOME - SERVICES SECTION STYLE
     align-items: stretch;
     gap: var(--gap-big);
     margin-top: var(--spacing-big);
+    margin-bottom: var(--spacing-big);
 }
 .services-box{
     display: flex;
@@ -375,13 +404,20 @@ HOME - CONTACT SECTION STYLE
 BUTTONS
 ==================================================*/
 
-.btn{
+.button{
     padding: var(--spacing-small);
     background-color: var(--color-accent);
     cursor: pointer;
+    border: none;
+    min-width: 250px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    color: var(--color-button-primary);
+    font-size: var(--font-body);
+    font-weight: 700;
 }
 
-.btn:hover{
+.button:hover{
     background-color: var(--color-accent-hover);
 }
 
