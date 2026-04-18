@@ -269,6 +269,8 @@ HOME - ABOUT SECTION STYLE
     /* max-width: 800px; */
     margin: var(--spacing-big) auto;
     gap: var(--gap-big) ;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .box{
@@ -288,7 +290,7 @@ HOME - ABOUT SECTION STYLE
     align-items: center;
     gap: var(--gap-small);
     /* flex: 1; */
-    min-width: 300px;
+    min-width: min(300px, 100%);
 }
 
 /*================================================== 
@@ -315,7 +317,6 @@ HOME - SERVICES SECTION STYLE
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1 1 0;
     flex: 1 1 300px;
     min-width: 0;
     gap: var(--spacing-small);
