@@ -48,6 +48,7 @@ CSS Reset
     --font-color-title: #d6bf9d;
     --font-color-body-light: #fdfdfd;
     --font-color-body-dark: #1d1d1d;
+    --font-body-size: 16px;
 
     /*================================================== 
     Spacing
@@ -86,38 +87,37 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--font-display);
     text-transform: uppercase;
     padding: 0.4em;
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.7em;
 }
 
 
 h1{
-    /* font-size: 5em; */
-    font-size: clamp(3rem 50vw 7rem);
+    font-size: clamp(3rem, 7vw, 7rem);
+    letter-spacing: 0.1em;
     line-height: 0.9em;
     color: var(--color-accent);
 }
 
 h2{
-    /* font-size: 7rem; */
-    font-size: clamp(3rem 50vw 7rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 0.9em;
     color: var(--color-accent);
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
 }
 
 h3{
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 0.2em;
 }
 
 h4, h5, h6{
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.15em;
 
 }
 
 p{
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: var(--font-body-size);
     color: var(--font-color-body-light);
 }
 
@@ -168,7 +168,7 @@ CUSTOM CLASSES
 }
 
 .container{
-    width: 1600px;
+    width: 100%;
     margin: auto;
     padding: var(--spacing-big) var(--spacing-small);
     display: flex;
@@ -193,7 +193,6 @@ CUSTOM CLASSES
 }
 
 .hero-title{
-    /* font-size: 8em; */
     font-size: clamp(3rem, 7vw, 7rem);
 
 }
@@ -272,6 +271,10 @@ HOME - ABOUT SECTION STYLE
     gap: var(--gap-big) ;
 }
 
+.box{
+    flex: 1 1 250px;
+}
+
 .small-separator-edge{
     width: 100px;
     height: 1px;
@@ -292,19 +295,28 @@ HOME - ABOUT SECTION STYLE
 HOME - SERVICES SECTION STYLE
 ==================================================*/
 .services-container{
+    width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:space-around;
     align-items: stretch;
     gap: var(--gap-big);
     margin-top: var(--spacing-big);
     margin-bottom: var(--spacing-big);
 }
+
+.services, .box-container{
+    flex-wrap: wrap;
+}
+
 .services-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1 1 0;
+    flex: 1 1 300px;
     min-width: 0;
     gap: var(--spacing-small);
 
@@ -409,11 +421,11 @@ BUTTONS
     background-color: var(--color-accent);
     cursor: pointer;
     border: none;
-    min-width: 250px;
+    min-width: min(250px, 100%);
     border-radius: 8px;
     transition: all 0.3s;
     color: var(--color-button-primary);
-    font-size: var(--font-body);
+    font-size: var(--font-body-size);
     font-weight: 700;
 }
 
@@ -424,3 +436,30 @@ BUTTONS
 /*================================================== 
 WEBSITE - RESPONSIVENESS
 ==================================================*/
+@media (max-width: 768px) {
+    :root {
+        --spacing-small: 20px;
+        --spacing-medium: 30px;
+        --spacing-big: 50px;
+        --gap-big: 30px;
+    }
+
+    .hero,
+    .about-section,
+    .quote {
+        background-attachment: scroll;
+    }
+
+    .grid-portfolio {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-portfolio-img2 {
+        grid-row: span 1;  /* stop spanning on small screens */
+    }
+
+    .grid-portfolio-img:hover,
+    .grid-portfolio-img2:hover {
+        transform: none;
+    }
+}
