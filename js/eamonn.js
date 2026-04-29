@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="artists.html">Artists</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("formMessage");
 
     // Listen for form submission
-    form.addEventListener("submit", (e) => {
+    if (form){
+        form.addEventListener("submit", (e) => {
 
         // Prevent page refresh
         e.preventDefault();
@@ -73,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Reset form
         form.reset();
     });
+    }
 
 });
 
