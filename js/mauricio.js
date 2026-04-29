@@ -54,28 +54,16 @@ function renderSmallSeparator(){
 // Description:Renders the menu in all pages
 // ----------------------------------
 function renderMenu(){
-    return `<nav class="navbar">
-
-    <!-- Logo / Brand -->
-    <div class="logo">
-        <a href="index.html">Ink & Iron</a>
-    </div>
-
-    <!-- Hamburger menu (mobile) -->
-    <!-- Used for toggling navigation on smaller screens -->
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
-
-    <!-- Navigation links -->
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="artists.html">Artists</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-</nav>`   
+    return `<div class="navbar">
+                <div class="logo"><a href="index.html">Ink &amp; Iron</a></div>
+                <div class="menu-toggle">&#9776;</div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>`   
 }
 
 

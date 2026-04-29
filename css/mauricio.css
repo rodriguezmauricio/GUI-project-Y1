@@ -21,23 +21,12 @@ CSS Reset
     ==================================================*/
     --color-accent: #bb8431;
     --color-accent-hover: #83591b;
-    --color-accent-secondary: #ffffff;
-    --color-accent-terciary: #ffffff;
+    --color-border: #ccc;
 
     --color-faded: #444444;
 
     --color-bg1: #0e0e0e;
     --color-bg2: #eeeeee;
-
-
-    /*================================================== 
-    Buttons styles
-    ==================================================*/
-    --color-button-primary: #ffffff;
-    --color-button-primary-hover: #ffffff;
-    
-    --color-button-secondary: #ffffff;
-    --color-button-secondary-hover: #ffffff;
 
 
     /*================================================== 

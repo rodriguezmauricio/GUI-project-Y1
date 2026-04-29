@@ -46,7 +46,7 @@
 /* Header styling */
 .contact-header {
     text-align: center;
-    padding: 40px;
+    padding: var(--spacing-medium);
 }
 
 /* Main layout using flexbox */
@@ -55,7 +55,7 @@
     flex-wrap: wrap; /* responsive */
     justify-content: center;
     gap: 40px;
-    padding: 40px;
+    padding: var(--spacing-medium);
 }
 
 /* Contact info section */
@@ -73,20 +73,20 @@
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: var(--spacing-small);
     margin-bottom: 15px;
 
     /* Clean modern look */
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
 }
 
 /* Button styling */
 .contact-form button {
-    padding: 10px;
+    padding: var(--spacing-small);
     width: 100%;
-    background: black;
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-button-primary);
     border: none;
     cursor: pointer;
 }
@@ -115,13 +115,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: black;
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-button-primary);
 }
 
 /* Logo */
 .logo a {
-    color: white;
+    color: var(--color-button-primary);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -136,7 +136,7 @@
 
 /* Links style */
 .nav-links a {
-    color: white;
+    color: var(--color-button-primary);
     text-decoration: none;
 }
 
@@ -153,8 +153,8 @@
 
 .footer {
     background: #111;
-    color: white;
-    padding: 40px 20px;
+    color: var(--color-button-primary);
+    padding: var(--spacing-medium) 20px;
 }
 
 .footer-container {
@@ -173,7 +173,7 @@
 }
 
 .footer-section a {
-    color: white;
+    color: var(--color-button-primary);
     text-decoration: none;
 }
 
@@ -200,7 +200,7 @@
         position: absolute;
         top: 60px;
         right: 0;
-        background: black;
+        background: var(--color-accent);
         flex-direction: column;
         width: 200px;
         display: none;
@@ -209,6 +209,7 @@
     /* Active menu */
     .nav-links.active {
         display: flex;
+        flex-direction: column;
     }
 }
 
