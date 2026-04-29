@@ -130,12 +130,10 @@ if (mapSlot)   mapSlot.innerHTML   = renderMap();
 // ----------------------------------
 function renderMap(){
     //Await for Eamonn's code
-    const address = '12 Shop Street, Galway, H91 ABC1';
+    const address = "Spanish Arch, Galway";
     return `<iframe
                 src="https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed"
-                width="100%"
-                height="400"
-                style="border:0; border-radius: 12px;"
+                style="width: 100%; height: 400px; border: 0; border-radius: 0px; display: block;"
                 loading="lazy"
                 allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
