@@ -126,7 +126,7 @@
 .navbar-inner{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -137,8 +137,9 @@
 .logo a {
     color: var(--color-button-primary);
     text-decoration: none;
+    font-family: var(--font-display);
     font-size: 20px;
-    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 /* Navigation links */
@@ -146,6 +147,8 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
 }
 
 /* Links style */

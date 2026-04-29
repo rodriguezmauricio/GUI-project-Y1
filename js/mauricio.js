@@ -121,6 +121,11 @@ function renderMap(){
 const mapSlot   = document.querySelector(".render-map");
 if (mapSlot)   mapSlot.innerHTML   = renderMap();
 
+// ----------------------------------
+// Author: Mauricio Rodriguez
+// Description:Renders the footer in all pages with Eamonn's code
+// ----------------------------------
+
 
 // ----------------------------------
 // Author: Mauricio Rodriguez

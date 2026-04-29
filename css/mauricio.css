@@ -57,6 +57,7 @@ body{
     background-color: var(--color-bg1);
     text-align: center;
     overflow-x: hidden;
+    font-family: var(--font-body);
 }
 
 header{
