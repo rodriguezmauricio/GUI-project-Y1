@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--ensures proper scaling and character support-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--    External CSS    -->
+        <link rel="stylesheet" href="css/eamonn.css">
+
+        <!-- JavaScript loaded after html-->
+         <script src="js/contact.js" defer></script>
+    
+         <title>Contact Us</title>
+</head>
+<body>
+    <!-- navigation using js-->
+     <nav>
+        <div class="render-menu"></div>
+     </nav>
+    
+     <!--header section-->
+     <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Book your appointment or ask us anything</p>
+     </header>
+
+        <main>
+                <section class="contact-section">
+
+                    <!-- left side;contact info-->
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+
+                        <p><strong>Address:</strong>123 Ink Street</p>
+                        <p><strong>Phone</strong>089 123 4567</p>
+                        <p><strong>Email</strong>info@inkandiron.com</p>
+
+                        <!-- Explanation: gives multiple users ways to contact-->
+                    </div>
+
+                    <!-- Right side contact form-->
+                     <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm">
+                            <!-- name input-->
+                             <input type="email" id="email" placeholder="Your Email" required>
+
+                    <!-- Message input -->
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+
+                    <!-- Submit button -->
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+                    <!-- feedback message-->
+                     <p id="formMessage"></p>
+                     
+                     </div>
+                </section>
+        </main>
+
+    </body>
+</html>
