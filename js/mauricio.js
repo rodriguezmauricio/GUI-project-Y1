@@ -51,29 +51,7 @@ function renderSmallSeparator(){
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
-// Description:Renders the menu in all pages
-// ----------------------------------
-// function renderMenu(){
-//     return `<div class="navbar">
-//                 <div class="logo"><a href="index.html">Ink &amp; Iron</a></div>
-//                 <div class="menu-toggle">&#9776;</div>
-//                 <ul class="nav-links" id="nav-links">
-//                     <li><a href="index.html">Home</a></li>
-//                     <li><a href="artists.html">Artists</a></li>
-//                     <li><a href="portfolio.html">Portfolio</a></li>
-//                     <li><a href="contact.html">Contact</a></li>
-//                 </ul>
-//             </div>`   
-// }
-
-
-// const menu = document.querySelector(".render-menu");
-// if (menu)   menu.innerHTML = renderMenu();
-
-
-// ----------------------------------
-// Author: Mauricio Rodriguez
-// Description:Renders the portfolio grid
+// Description: Renders the portfolio grid
 // I know that using a loop to iterate and render the images would be better,
 // but since a few of those have a different class and there is a limited amount of pictures
 // I decide to hard code it and duplicate it. 
