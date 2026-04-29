@@ -20,6 +20,13 @@
  overflow: hidden; /*prevents image overflow*/
 }
 
+.artist-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
 /*artist image styling */
 /* ensure all images are consistent and are always responsive */
 .artist-card:hover {
@@ -111,12 +118,19 @@
 
 /* NAVBAR */
 .navbar {
+    padding: var(--spacing-small);
+    background: var(--color-accent);
+    color: var(--font-color-body-light);
+}
+
+.nav-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-small);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: var(--color-accent);
-    color: var(--color-button-primary);
 }
 
 /* Logo */
@@ -158,6 +172,9 @@
 }
 
 .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-small);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

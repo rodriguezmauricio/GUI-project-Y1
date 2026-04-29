@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // This allows us to reuse the same navigation across multiple pages
     const menuHTML = `
         <div class="navbar">
+            <div class="navbar-inner">
             <div class="logo"><a href="index.html">Ink &amp; Iron</a></div>
             <div class="menu-toggle">&#9776;</div>
             <ul class="nav-links" id="nav-links">
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
         </ul>
+            </div>
     </div>
     `;
 
