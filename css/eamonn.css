@@ -210,8 +210,10 @@
 
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: var(--spacing-medium);
+    padding-top: var(--spacing-small);
+    padding-bottom: 0;
+    font-size: 12px;
 }
 
 /* ========================= */
