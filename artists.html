@@ -3,7 +3,7 @@
     <head>
         <!-- Basic setup page for proper character encoding and responsive design-->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--linking external CSS files to keep styling seperate from structure-->
         <link rel="stylesheet" href="css/maurico.css">
@@ -12,23 +12,21 @@
         <link rel="stylesheet" href="css/NavbarFooterResponsive.css">
         
         <!-- javascript files are loaded with "defer" so html loads first (better performance)-->
-        <script src="js/maurico.s" defer></script>
+        <script src="js/maurico.js" defer></script>
         <script src="js/eamonn.js" defer></script>
         <title>Ink & Iron - Artists</title>
     </head>
         <body>
+            <!-- navigation is dynamically generated using JavaScript-->
+                <!--   This avoids repeating the same menu on every page-->
+                <nav>
+                    <div class="render-menu"></div>
+                </nav>
 
-        </body>
-                <!-- navigation is dynamically generated using JavaScript-->
-                 <!--   This avoids repeating the same menu on every page-->
-                    <nav>
-                        <div class="render-menu"></div>
-                    </nav>
-
-                    <!-- Page header introduces the content-->
-                <header>
-                    <h1>Our Artists</h1>
-                </header>
+                <!-- Page header introduces the content-->
+            <header>
+                <h1>Our Artists</h1>
+            </header>
 
                 <main>
                     <!--Intro section to describe the purpose of the pages for consistencey-->
@@ -47,32 +45,31 @@
                              </div>
                                 </div>
                     </section>
-                <!-- Artists sectipon displayed as a flexible grid-->
-                <section>
-                        <div class="artists-container">
+                    <!-- Artists sectipon displayed as a flexible grid-->
+                    <section>
+                            <div class="artists-container">
 
-                            <!-- each artist is placed inside a reusable "card" layout-->
-                             <!--this makes the design consistent and easy to scale-->
+                                <!-- each artist is placed inside a reusable "card" layout-->
+                                <!--this makes the design consistent and easy to scale-->
 
-                             <div class="artist-card">
-                                <!--Images stored locally for faster loading and reliability -->
-                                <img src="images/port_0.jpg" alt="Tattoo artist john Black">
+                                <div class="artist-card">
+                                    <!--Images stored locally for faster loading and reliability -->
+                                    <img src="images/port_0.jpg" alt="Tattoo artist john Black">
 
-                                <!--Semantic headings improve accesibility and SEO-->
-                                <h3>John Black</h3>
+                                    <!--Semantic headings improve accesibility and SEO-->
+                                    <h3>John Black</h3>
 
-                                <!-- Short description helps users understand each artists style -->
-                                 <p>Specialises in realism and potrait tattoos.</p>
-                                 </div>
+                                    <!-- Short description helps users understand each artists style -->
+                                    <p>Specialises in realism and potrait tattoos.</p>
+                                    </div>
 
-                                 <div class="artist-card">
-                                    <img src="images/port_3.jpg" alt="Tattoo artist Emma Shade">
-                                    <h3>Emma Shade</h3>
-                                    <p>Blackwork and geometric tattoo artist.</p>
-                                 </div>
-                                 </div>
-                </section>
+                                    <div class="artist-card">
+                                        <img src="images/port_3.jpg" alt="Tattoo artist Emma Shade">
+                                        <h3>Emma Shade</h3>
+                                        <p>Blackwork and geometric tattoo artist.</p>
+                                    </div>
+                                    </div>
+                    </section>
                 </main>
-    </html>
-            </body>
-            </html>
+        </body>
+</html>
