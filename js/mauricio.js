@@ -53,22 +53,22 @@ function renderSmallSeparator(){
 // Author: Mauricio Rodriguez
 // Description:Renders the menu in all pages
 // ----------------------------------
-function renderMenu(){
-    return `<div class="navbar">
-                <div class="logo"><a href="index.html">Ink &amp; Iron</a></div>
-                <div class="menu-toggle">&#9776;</div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="artists.html">Artists</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>`   
-}
+// function renderMenu(){
+//     return `<div class="navbar">
+//                 <div class="logo"><a href="index.html">Ink &amp; Iron</a></div>
+//                 <div class="menu-toggle">&#9776;</div>
+//                 <ul class="nav-links" id="nav-links">
+//                     <li><a href="index.html">Home</a></li>
+//                     <li><a href="artists.html">Artists</a></li>
+//                     <li><a href="portfolio.html">Portfolio</a></li>
+//                     <li><a href="contact.html">Contact</a></li>
+//                 </ul>
+//             </div>`   
+// }
 
 
-const menu = document.querySelector(".render-menu");
-if (menu)   menu.innerHTML = renderMenu();
+// const menu = document.querySelector(".render-menu");
+// if (menu)   menu.innerHTML = renderMenu();
 
 
 // ----------------------------------
@@ -111,11 +111,10 @@ function renderPortfolioGrid2(imagesArr){
 
 const gridSlot  = document.querySelector(".grid-portfolio-slot");
 const gridSlot2 = document.querySelector(".grid-portfolio-slot2");
-const mapSlot   = document.querySelector(".render-map");
 
 if (gridSlot)  gridSlot.innerHTML  = renderPortfolioGrid(imagesArr);
 if (gridSlot2) gridSlot2.innerHTML = renderPortfolioGrid2(imagesArr.reverse());
-if (mapSlot)   mapSlot.innerHTML   = renderMap();
+
 
 
 // ----------------------------------
@@ -141,7 +140,9 @@ function renderMap(){
             </iframe>`;
 }
 
-document.querySelector(".render-map").innerHTML = renderMap();
+const mapSlot   = document.querySelector(".render-map");
+if (mapSlot)   mapSlot.innerHTML   = renderMap();
+
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
@@ -185,4 +186,6 @@ function renderFooter(){
 
 </footer>`;
 }
-document.querySelector(".render-footer").innerHTML = renderFooter();
+
+const footerSlot   = document.querySelector(".render-footer");
+if (footerSlot)   footerSlot.innerHTML   = renderFooter();
