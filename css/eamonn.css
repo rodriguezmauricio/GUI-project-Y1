@@ -123,10 +123,10 @@
     color: var(--font-color-body-light);
 }
 
-.nav-inner{
+.navbar-inner{
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-small);
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -183,6 +183,17 @@
 
 .footer-section {
     max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section h3{
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin-bottom: var(--gap-small);
 }
 
 .footer-section ul {
