@@ -60,19 +60,30 @@
 .contact-section {
     display: flex;
     flex-wrap: wrap; /* responsive */
+    align-items: flex-start;
     justify-content: center;
     gap: 40px;
     padding: var(--spacing-medium);
 }
 
+.contact-section h2{
+    font-size: clamp(1.5rem 3vw 2.5rem);
+    letter-spacing: 0.1rem;
+    margin-bottom: var(--spacing-small);
+    text-align: center;
+}
+
 /* Contact info section */
 .contact-info {
     max-width: 300px;
+    flex: 1 1 320px;
+    max-width: 480px;
 }
 
 /* Form container */
 .contact-form {
-    max-width: 400px;
+    flex: 1 1 320px;
+    max-width: 480px;
     width: 100%;
 }
 
@@ -247,10 +258,11 @@
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
     .footer-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 

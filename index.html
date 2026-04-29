@@ -185,17 +185,41 @@
         Author: Mauricio Rodriguez
         Description: 
         =================================== -->
-        <section>
-            <div class="container">
-                <h4>
-                    contact
-                </h4>
-                <h2>
-                    talk to us
-                </h2>
-                <div class="separator-slot"></div>
-            </div>
-        </section>
+        <section class="contact-section">
+
+                    <!-- left side;contact info-->
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+
+                        <p><strong>Address: </strong>123 Ink Street</p>
+                        <p><strong>Phone: </strong>089 123 4567</p>
+                        <p><strong>Email: </strong>info@inkandiron.com</p>
+
+                        <!-- Explanation: gives multiple users ways to contact-->
+                    </div>
+
+                    <!-- Right side contact form-->
+                     <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm">
+                            <!-- name input-->
+                            <input type="text" id="name" placeholder="Your Name" required>
+
+                            <!-- email input-->
+                            <input type="email" id="email" placeholder="Your Email" required>
+
+                            <!-- Message input -->
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+
+                            <!-- Submit button -->
+                            <button type="submit">Send Message</button>
+                        </form>
+
+                    <!-- feedback message-->
+                     <p id="formMessage"></p>
+                     
+                     </div>
+                </section>
         <!-- ==================================
         CONTACT END
         =================================== -->
