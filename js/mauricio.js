@@ -51,10 +51,31 @@ function renderSmallSeparator(){
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
-// Description:Renders the portfolio grid
+// Description:Renders the menu in all pages
 // ----------------------------------
 function renderMenu(){
-    return `<h4>Waiting for menu to be replaced here</h4>`   
+    return `<nav class="navbar">
+
+    <!-- Logo / Brand -->
+    <div class="logo">
+        <a href="index.html">Ink & Iron</a>
+    </div>
+
+    <!-- Hamburger menu (mobile) -->
+    <!-- Used for toggling navigation on smaller screens -->
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>`   
 }
 
 
@@ -108,9 +129,64 @@ if (gridSlot)  gridSlot.innerHTML  = renderPortfolioGrid(imagesArr);
 if (gridSlot2) gridSlot2.innerHTML = renderPortfolioGrid2(imagesArr.reverse());
 if (mapSlot)   mapSlot.innerHTML   = renderMap();
 
+
+// ----------------------------------
+// Author: Mauricio Rodriguez
+// Description:Renders the portfolio grid
+// I know that using a loop to iterate and render the images would be better,
+// but since a few of those have a different class and there is a limited amount of pictures
+// I decide to hard code it and duplicate it. 
+// Against the DRY concept, but acceptable for such a small project.
+//
+// images source: pexels.com
+// ----------------------------------
 function renderMap(){
     //Await for Eamonn's code
     return `<h2>MAP AWAIT</h2>`;
 }
 
 document.querySelector(".render-map").innerHTML = renderMap();
+
+// ----------------------------------
+// Author: Mauricio Rodriguez
+// Description:Renders the footer in all pages with Eamonn's code
+// ----------------------------------
+function renderFooter(){
+    //Eamonn`s code
+    return `<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-section">
+            <h3>Ink & Iron</h3>
+            <p>Professional tattoo studio delivering unique and creative designs.</p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: info@inkandiron.com</p>
+            <p>Phone: 089 123 4567</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Ink & Iron. All rights reserved.</p>
+    </div>
+
+</footer>`;
+}
+document.querySelector(".render-footer").innerHTML = renderFooter();

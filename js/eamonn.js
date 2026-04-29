@@ -4,9 +4,65 @@
 //Description: text decribing what the function/block does
 //==================================
 
-function example(){
-    console.log("Example of how the code block and comments works")
-}
+eamonn.JSON.stringify()
+// Wait until the page is fully loaded before running JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Select the container where the menu will be inserted
+    const menuContainer = document.querySelector(".render-menu");
+
+    // Menu HTML is stored as a template string
+    // This allows us to reuse the same navigation across multiple pages
+    const menuHTML = `
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    `;
+
+    // Insert menu into the page
+    // This avoids repeating navigation code in every HTML file
+    if (menuContainer) {
+        menuContainer.innerHTML = menuHTML;
+    }
+});
+
+// Wait until page loads
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Select form and message display
+    const form = document.getElementById("contactForm");
+    const message = document.getElementById("formMessage");
+
+    // Listen for form submission
+    form.addEventListener("submit", (e) => {
+
+        // Prevent page refresh
+        e.preventDefault();
+
+        // Get input values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const userMessage = document.getElementById("message").value.trim();
+
+        // Simple validation
+        if (name === "" || email === "" || userMessage === "") {
+            message.textContent = "Please fill in all fields.";
+            message.style.color = "red";
+            return;
+        }
+
+        // If valid
+        message.textContent = "Message sent successfully!";
+        message.style.color = "green";
+
+        // Reset form
+        form.reset();
+    });
+
+});
 
 //==================================
 //[CODE BLOCK NAME] END
