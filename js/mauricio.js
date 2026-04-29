@@ -130,7 +130,17 @@ if (mapSlot)   mapSlot.innerHTML   = renderMap();
 // ----------------------------------
 function renderMap(){
     //Await for Eamonn's code
-    return `<h2>MAP AWAIT</h2>`;
+    const address = '12 Shop Street, Galway, H91 ABC1';
+    return `<iframe
+                src="https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed"
+                width="100%"
+                height="400"
+                style="border:0; border-radius: 12px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Studio location map">
+            </iframe>`;
 }
 
 document.querySelector(".render-map").innerHTML = renderMap();
