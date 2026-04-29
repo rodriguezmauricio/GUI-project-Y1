@@ -60,7 +60,7 @@ function renderMenu(){
                 <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="artists.html">Artists</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>`   
@@ -164,7 +164,7 @@ function renderFooter(){
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="artists.html">Artists</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
