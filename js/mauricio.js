@@ -113,6 +113,7 @@ function renderPortfolioGrid2(imagesArr){
     <div class="grid-portfolio-img2"  style="background-image: url(images/${imagesArr[7]})"></div>
     <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[5]})"></div>
     <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[6]})"></div>
+    <div class="grid-portfolio-img"   style="background-image: url(images/${imagesArr[4]})"></div>
     </div>`
 }
 
