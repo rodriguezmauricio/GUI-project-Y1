@@ -1,13 +1,18 @@
 //==================================
-//[CODE BLOCK NAME] BEGIN
-//Author: Mauricio Rodriguez
-//Description: text here
+// RENDER SEPARATOR BEGIN
+// Author: Mauricio Rodriguez
+// Description: Renders the separator below the headings
 //==================================
 
 //==================================
-//[CODE BLOCK NAME] END
+// RENDER SEPARATOR END
 //==================================
 
+//==================================
+// RENDER SEPARATOR BEGIN
+// Author: Mauricio Rodriguez
+// Description: Renders the separator below the headings
+//==================================
 function renderSeparator(){
     
     const icon = `<svg fill="currentColor" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470"><g>
@@ -26,7 +31,15 @@ const separatorSlot = document.querySelectorAll(".separator-slot")
 separatorSlot.forEach((slot) => {
     return slot.innerHTML = renderSeparator();
 })
+//==================================
+// RENDER SEPARATOR END
+//==================================
 
+//==================================
+// RENDER DARK STYLE SEPARATOR BEGIN
+// Author: Mauricio Rodriguez
+// Description: Renders the separator in a dark style below the headings
+//==================================
 function renderSeparatorDark(){
     
     const icon = `<svg fill="currentColor" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470"><g>
@@ -45,15 +58,27 @@ const separatorSlotDark = document.querySelectorAll(".separator-slot-dark");
 if (separatorSlotDark) separatorSlotDark.forEach((slot) => {
     return slot.innerHTML = renderSeparatorDark();
 })
+//==================================
+// RENDER SEPARATOR END
+//==================================
 
-// renders a small separator
+//==================================
+//RENDER SMALL SEPARATOR BEGIN
+//Author: Mauricio Rodriguez
+//Description: Renders a small separator
+//==================================
 function renderSmallSeparator(){
     return `<div class="separator">
     <div class="small-separator-edge"></div>
     </div>`
 }
+//==================================
+// RENDER SMALL SEPARATOR END
+//==================================
+
 
 // ----------------------------------
+// RENDER PORTFOLIO GRID BEGIN
 // Author: Mauricio Rodriguez
 // Description: Renders the portfolio grid
 // I know that using a loop to iterate and render the images would be better,
@@ -99,9 +124,12 @@ const gridSlot2 = document.querySelector(".grid-portfolio-slot2");
 if (gridSlot)  gridSlot.innerHTML  = renderPortfolioGrid(imagesArr);
 if (gridSlot2) gridSlot2.innerHTML = renderPortfolioGrid2(imagesArr.reverse());
 
-
+//==================================
+// RENDER PORTFOLIO GRID END
+//==================================
 
 // ----------------------------------
+// RENDER MAP BEGIN
 // Author: Mauricio Rodriguez
 // Description:Renders the map in all pages
 // ----------------------------------
@@ -122,16 +150,16 @@ function renderMap(){
 const mapSlot   = document.querySelector(".render-map");
 if (mapSlot)   mapSlot.innerHTML   = renderMap();
 
+//==================================
+// RENDER MAP END
+//==================================
+
 // ----------------------------------
+// RENDER FOOTER
 // Author: Mauricio Rodriguez
 // Description:Renders the footer in all pages with Eamonn's code
 // ----------------------------------
 
-
-// ----------------------------------
-// Author: Mauricio Rodriguez
-// Description:Renders the footer in all pages with Eamonn's code
-// ----------------------------------
 function renderFooter(){
     //Eamonn`s code
     return `<footer class="footer">
@@ -174,6 +202,10 @@ function renderFooter(){
 // get the footer div and if exists, renders the footer
 const footerSlot   = document.querySelector(".render-footer");
 if (footerSlot)   footerSlot.innerHTML   = renderFooter();
+
+//==================================
+// RENDER FOOTER END
+//==================================
 
 
 //==============================================
