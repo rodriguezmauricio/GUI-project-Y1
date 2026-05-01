@@ -20,6 +20,8 @@ function renderSeparator(){
     </div>`
 }
 
+// get the separator divs for light text and icon and if exists, renders the separators
+
 const separatorSlot = document.querySelectorAll(".separator-slot")
 separatorSlot.forEach((slot) => {
     return slot.innerHTML = renderSeparator();
@@ -37,12 +39,14 @@ function renderSeparatorDark(){
     </div>`
 }
 
+// get the separator divs for dark text and icon and if exists, renders the separators
 const separatorSlotDark = document.querySelectorAll(".separator-slot-dark");
 
 if (separatorSlotDark) separatorSlotDark.forEach((slot) => {
     return slot.innerHTML = renderSeparatorDark();
 })
 
+// renders a small separator
 function renderSmallSeparator(){
     return `<div class="separator">
     <div class="small-separator-edge"></div>
@@ -87,6 +91,8 @@ function renderPortfolioGrid2(imagesArr){
     </div>`
 }
 
+
+// get the grids divs and if exists, renders the grids
 const gridSlot  = document.querySelector(".grid-portfolio-slot");
 const gridSlot2 = document.querySelector(".grid-portfolio-slot2");
 
@@ -97,13 +103,7 @@ if (gridSlot2) gridSlot2.innerHTML = renderPortfolioGrid2(imagesArr.reverse());
 
 // ----------------------------------
 // Author: Mauricio Rodriguez
-// Description:Renders the portfolio grid
-// I know that using a loop to iterate and render the images would be better,
-// but since a few of those have a different class and there is a limited amount of pictures
-// I decide to hard code it and duplicate it. 
-// Against the DRY concept, but acceptable for such a small project.
-//
-// images source: pexels.com
+// Description:Renders the map in all pages
 // ----------------------------------
 function renderMap(){
     //Await for Eamonn's code
@@ -118,6 +118,7 @@ function renderMap(){
             </iframe>`;
 }
 
+// get the map div and if exists, renders the map
 const mapSlot   = document.querySelector(".render-map");
 if (mapSlot)   mapSlot.innerHTML   = renderMap();
 
@@ -170,5 +171,6 @@ function renderFooter(){
 </footer>`;
 }
 
+// get the footer div and if exists, renders the footer
 const footerSlot   = document.querySelector(".render-footer");
 if (footerSlot)   footerSlot.innerHTML   = renderFooter();
