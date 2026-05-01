@@ -463,3 +463,18 @@ WEBSITE - RESPONSIVENESS
         transform: none;
     }
 }
+
+/* TEST CASES */
+/* 
+    Test 1 : Background images
+    Started testing with simple background images, but it looks better if its darker
+    so I used the linear gradient to overlay the image layers and added parallax
+
+    Test 2: Flexbox vs Grid
+    The whole project could be in flexbox, but responsiveness is easier
+    to do with flexbox. Kept the grid just for the galleries.
+
+    Test 3: Lightbox vs scale image
+    Started with a lighbox project, but I opted for the scale transform for simplicity
+    and not to be just another lightbox like everyone elses.
+*/

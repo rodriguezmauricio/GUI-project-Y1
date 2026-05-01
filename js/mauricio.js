@@ -174,3 +174,18 @@ function renderFooter(){
 // get the footer div and if exists, renders the footer
 const footerSlot   = document.querySelector(".render-footer");
 if (footerSlot)   footerSlot.innerHTML   = renderFooter();
+
+
+//==============================================
+// TEST CASES
+//==============================================
+// Test 1 (Render functions);
+// Tested all the render functions without verifying first if the divs exists
+// it shows a console error that doesn't break but its bad.
+
+// Test 2 (Grid Span Columns);
+// Tested using everyother grid with col-span but the design breaks and doesn't look good
+
+// Test 3 (id's vs classes)
+// Tried to use ID's to render the functions, but its easier with classes
+// because it target multiple divs and renders everything with less code
